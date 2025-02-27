@@ -1,0 +1,308 @@
+/*css reset*/
+html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  body {
+    margin: 0;
+  }
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+      display: block;
+  }
+  body {
+      line-height: 1;
+  }
+  ol, ul {
+      list-style: none;
+  }
+  blockquote, q {
+      quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+      content: '';
+      content: none;
+  }
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+  
+  /*------------------------------------------------------------------------------------------*/
+  .container,
+  .container-fluid,
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+    .container-sm, .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container-md, .container-sm, .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container-lg, .container-md, .container-sm, .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1240px;
+    }
+  }
+  
+  /* fonts */
+  @font-face{
+    font-family:"Space-Grotesk-Regular";
+    src: url('../fonts/Space_Grotesk.font/SpaceGrotesk-Regular.ttf')
+  }
+  @font-face{
+    font-family:"Space-Grotesk-medium";
+    src: url('../fonts/Space_Grotesk.font/SpaceGrotesk-Medium.ttf');
+  } 
+  /* header */
+.header-content{
+    margin-top: 60px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    
+}
+.header-list{
+    display:flex;
+    align-items: center;
+    gap: 40px;
+    font-family:"Space-Grotesk-Regular"; 
+    font-size: 20px;
+}
+.header-link{
+  color: #000;
+  text-decoration: none;
+}
+.header-button{
+  padding:20px 35px;
+  background-color:#fff;
+  border: 1px solid #000;
+  border-radius:14px;
+  font-size: 20px;
+
+}
+.header-button-link{
+  color: #000;
+  text-decoration: none;
+}
+/* hero-section */
+.hero-content{
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.hero-h1{
+  font-family: "Space-Grotesk-medium";
+  font-size: 60px;
+  max-width: 531px;
+  line-height: 80px;
+}
+.hero-paragraph{
+  margin-top: 35px;
+  font-size: 20px;
+  font-family:"Space-Grotesk-Regular";
+  font-size: 20px;
+  max-width: 498px;
+  line-height: 28px;
+}
+.hero-button{
+  margin-top: 35px;
+  padding: 20px 35px;
+  background-color: #000;
+  border-radius: 14px;
+  font-family:"Space-Grotesk-Regular";
+  font-size: 20px;
+  color: #fff;
+}
+.hero-button-link{
+  color: #fff;
+  text-decoration: none;
+}
+/* logo_section */
+.brands-content{
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brands-image-disable{
+  pointer-events: none;
+  filter: grayscale(1);
+}
+/* Services-section */
+.services-content{
+  margin-top: 140px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.services-logo{
+  font-family: "Space-Grotesk-medium";
+  font-size: 40px;
+  background-color: #B9FF66;
+  border-radius: 7px ;
+  max-width: fit-content;
+  padding: 0 7px;
+}
+.services-paragraph{
+  font-family: "Space-Grotesk-Regular";
+  font-size: 18px;
+  max-width: 580px;
+  line-height: 20px;
+}
+
+/* service-cards-secstion */
+.service-card{
+  margin-top: 80px;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+/*... service-card-line */
+.service-card-line{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.service-card-info{
+  display: flex;
+  border-radius: 45px;
+  padding: 50px;
+  border: 1px solid #000;
+  justify-content: space-between;
+  min-width: 589px;
+  max-width: 589px;
+  border-bottom: 5px solid #000;
+  align-items: center;
+}
+
+.service-card-h3{
+  font-family: "Space-Grotesk-medium";
+  font-size: 30px; 
+  padding: 0 7px;
+  border-radius: 7px;
+  width: fit-content;
+}
+.service-card-button{
+  display: flex;
+  align-items: center;
+  margin-top: 93px;
+  gap: 15px;
+  font-family: "Space-Grotesk-Regular";
+  font-size: 20px;
+}
+.service-card-arrow{
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-card-image{
+  height: 100%;
+}
+/* Gray */
+.service-card-gray.service-card-info{
+  background-color: #F3F3F3;
+}
+.service-card-gray .service-card-h3{
+  background-color: #B9FF66;
+}
+.service-card-gray .service-card-arrow{
+  background-color: #000;
+}
+/* Green */
+.service-card-green.service-card-info{
+  background-color: #B9FF66;
+}
+.service-card-green .service-card-h3{
+  background-color: #fff;
+}
+.service-card-green  .service-card-arrow{
+  background-color: #000;
+}
+/* Black */
+.service-card-black.service-card-info{
+  background-color: #000;
+}
+.service-card-black .service-card-h3{
+  background-color: #fff;
+}
+.service-card-black  .service-card-arrow{
+  background-color: #fff;
+}
+.service-card-black  .service-card-paragraph{
+  color: #fff;
+}
+
+/* proposal-section */
+
+.proposal-content{
+  margin-top: 123.5px;
+  max-width: 1440px;
+  max-height: 394px;
+  background-color: #F3F3F3;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+.proposal-img{
+
+}
